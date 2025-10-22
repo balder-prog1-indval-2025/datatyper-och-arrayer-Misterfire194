@@ -39,9 +39,28 @@ write ("Abonnentnummer = " + x.slice(y+1,10))
 } else {
     write ("Inget telefonnummer!")
 }
-*/
+
 
 write ("Deluppgift 5: ")
 let x = +await read ("Minuter: ")
 let y= x/60
-write ("Timmar = " + y[1])
+let z = y.toString().indexOf(".")  
+if (y.toString().includes(".")) {write ("Timmar = " + y.toString().slice(0,z))}
+else {write ("Timmar: " + y)}
+write ("Restminuter: " + x%60 )
+
+
+write("Deluppgift 6: ")
+let x= +await read ("Radie: ")
+let area = x**2 * Math.PI
+let omkrets = (2*x) * Math.PI
+write("Area = " + area)
+write("Omkrets = " + omkrets)
+*/
+
+write ("Deluppgift 7: ")
+let a = +await read ("Första sidlängden: ")
+let b = +await read ("Andra sidlängden: ")
+let c = +await read ("Sista sidlängden: ")
+let x = (a**) + b**   
+write ("Längsta diagonal = " + x)
