@@ -101,7 +101,7 @@ for(let i = 0; i < a.length; i++) {
     write(a[i])
 }
 
-
+*/
 write ("Deluppgift 11:")
 let a = []
 let x = +await read("Antal: ")
@@ -114,7 +114,7 @@ for (let i = 0; i < x; i++) {
 for (let i = (a.length-1); i>=0; i-=1) {
     write (a[i])
 }
-*/
+/*
 
 write("Extrauppgift 1:")
 let x = await read("Telefonnummer (med bindestreck)? ")
@@ -126,3 +126,57 @@ write ("Abonnentnummer = " + x.slice(y+1,10))
 } else {
     write ("Inget telefonnummer!")
 }
+
+
+
+write ("Extrauppgift 2:")
+let p = +await read ("p = ?:")
+let q = +await read ("q = ?:")
+let x1 = -(p/2) + Math.sqrt((p/2)**2 - q)
+let x2 = -(p/2) - Math.sqrt((p/2)**2 - q)
+
+let a = x1.toString().indexOf(".")
+let b = x2.toString().indexOf(".")
+if ((x1 || x2).toString().includes(".")){   
+write ("X1 = " + x1.toString().slice(0,a+2) + " och X2 = " + x2.toString().slice(0,b+2))
+}
+else if (x1.toString().includes(".") && !x2.toString().includes(".")) {
+    write("X1 = " + x1.toString().slice(0,a+2) + " och X2 = " + x2)
+}
+else if (!x1.toString().includes(".") && x2.toString().includes(".")) {
+    write("X1 = " + x1 + " och X2 = " + x2.toString().slice(0,b+2))
+}
+else if (!x1.toString().includes(".") && !x2.toString().includes(".")) {
+    write("X1 = " + x1 + " och X2 = " + x2)
+}
+
+
+
+write ("Extrauppgift 3:")
+// Skapa en 4x6-matris 
+// med noll (0) på alla platser
+let m = array2D(4, 6, 0);
+
+
+function show() {
+    for (let i = 0; i < 4; i++) {
+        for (let j = 0; j < 6; j++) {
+            write(m[i][j], "\t")
+        }
+
+        write()
+    }
+}
+
+
+
+show()
+
+while (true) {
+    let radindex = +await read("Radindex (0-3): ")
+    let kolumnindex = +await read("Kolumnindex (0-5): ")
+    let värde = +await read("Värde (ett heltal): ")
+    write (m[radindex][kolumnindex] = värde)
+    show()
+}
+*/
