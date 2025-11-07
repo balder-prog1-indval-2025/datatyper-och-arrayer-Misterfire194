@@ -101,7 +101,7 @@ for(let i = 0; i < a.length; i++) {
     write(a[i])
 }
 
-*/
+
 write ("Deluppgift 11:")
 let a = []
 let x = +await read("Antal: ")
@@ -114,7 +114,7 @@ for (let i = 0; i < x; i++) {
 for (let i = (a.length-1); i>=0; i-=1) {
     write (a[i])
 }
-/*
+
 
 write("Extrauppgift 1:")
 let x = await read("Telefonnummer (med bindestreck)? ")
@@ -176,7 +176,7 @@ while (true) {
     let radindex = +await read("Radindex (0-3): ")
     let kolumnindex = +await read("Kolumnindex (0-5): ")
     let värde = +await read("Värde (ett heltal): ")
-    write (m[radindex][kolumnindex] = värde)
+    m[radindex][kolumnindex] = värde
     show()
 }
 */
